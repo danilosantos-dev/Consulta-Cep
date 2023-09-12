@@ -1,0 +1,49 @@
+<div class="container-fluid p-0">
+
+  <h1 class="display-4 text-white">Consulte seu Cep</h1>
+
+  <form method="get" #ngForm>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Cep</label>
+      <input type="text" class="form-control" required [(ngModel)]="cep" name="cep">
+    </div>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Logradouro</label>
+      <input type="text" class="form-control" [(ngModel)]="logradouro" name="logradouro">
+    </div>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Complemento</label>
+      <input type="text" class="form-control" [(ngModel)]="complemento" name="complemento">
+    </div>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Bairro</label>
+      <input type="text" class="form-control" [(ngModel)]="bairro" name="bairro">
+    </div>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Localidade</label>
+      <input type="text" class="form-control" [(ngModel)]="localidade" name="localidade">
+    </div>
+
+    <div class="mb-3">
+      <label for="cep" class="form-label text-white">Uf</label>
+      <input type="text" class="form-control" [(ngModel)]="uf" name="uf">
+    </div>
+
+
+    <div class="botoes ">
+
+      <button type="submit" class="btn btn-primary" (click)="consultarCep()">Pesquisar <i class='bx bx-search-alt-2'></i></button>
+
+      <button  class="btn btn-danger" (click)="Limpar() ">Limpar <i class='bx bx-trash'></i></button>
+
+    </div>
+
+
+
+  </form>
+</div>
