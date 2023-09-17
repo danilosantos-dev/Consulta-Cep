@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ViacepService } from 'src/app/services/viacep.service';
-import { Endereco } from 'src/models/endereco.model';
+
 
 
 @Component({
@@ -25,7 +25,7 @@ export class FormComponent {
 
   consultarCep() {
     this.cepService.getByCep(this.cep).subscribe({
-      next: (endereco: Endereco) => {
+      next: (endereco: any) => {
         this.cep = endereco.cep;
         this.logradouro = endereco.logradouro;
         this.complemento = endereco.complemento;
@@ -39,7 +39,7 @@ export class FormComponent {
     });
   }
 
-  Limpar(){
+  limpar(){
     this.cep = '';
     this.logradouro = '';
     this.complemento = '';
